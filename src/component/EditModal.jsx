@@ -25,7 +25,7 @@ function EditModal({ visible, setVisible, data, updateEdit }) {
 
     function updatePost() {
         if (post.title && post.text && post.url && post.image) {
-            updateEdit({ ...data, ...post, updated_at: Date.now(), });
+            updateEdit({ ...data, ...post, updated_at: new Date(new Date().toString().split('GMT')[0] + ' UTC').toISOString().split('.')[0].replace('T', ' '), });
             setVisible(false);
         } else {
             setErorAddPost(true);

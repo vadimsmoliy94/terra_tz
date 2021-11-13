@@ -1,13 +1,11 @@
 import "../App.css";
 
 function PostList({ userData, deletePost, editTargetPost }) {
-    console.log(userData)
 
     return (
         <div className="list">
             {
                 userData.map((elem) => {
-                    if (elem.id < 45) return false
                     return < div key={elem.id + elem.title} className="border border-success blok">
                         <img className="img-thumbnail" src={elem.image || "/image/nofoto.png"} alt={elem.title} />
                         <h2 className="h2">{elem.title + elem.id}</h2>

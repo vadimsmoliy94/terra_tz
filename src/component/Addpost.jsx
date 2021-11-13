@@ -18,8 +18,8 @@ function AddPost({ addNewPost, userData }) {
         const newPost = {
             ...post,
             id: (userData[0].id || 0) + 1,
-            created_at: Date.now(),
-            updated_at: Date.now(),
+            created_at: new Date(new Date().toString().split('GMT')[0] + ' UTC').toISOString().split('.')[0].replace('T', ' '),
+            updated_at: new Date(new Date().toString().split('GMT')[0] + ' UTC').toISOString().split('.')[0].replace('T', ' '),
             active: 1,
             sort_order: 1,
             deleted_at: null,

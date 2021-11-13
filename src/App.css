@@ -1,8 +1,6 @@
 
 .App {
   text-align: center;
-  /* width: 800px;  */
-  
 }
 
 .blok{
@@ -14,19 +12,14 @@
   top: 0;
   left: 0;
   bottom: 0;
-  right: 600px;
-  
+  right: 0;
   background: rgba(0, 0, 0, 0.5);
 }
 .modal.active{
   display: flex;
   flex-direction: column;
-  
-  
   justify-content: center;
-  align-items: center;
-
-  
+  align-items: center; 
 }
 
 .edit-btn{
@@ -48,5 +41,23 @@
 }
 .btn-end{
   margin-top: 15px;
+}
+.sourse-btn{
+  margin-bottom: 15px;
+}
+.navbar{
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  border: 2px solid rgb(30, 49, 2);
+  border-radius: 15px;
+  background: rgb(207, 201, 241);
+}
+.nav-link{
+  margin-right: 40px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(3, 39, 39);
 }
 

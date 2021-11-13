@@ -3,7 +3,6 @@ function FormPost({ post, setPost, title }) {
 
     return (
         <>
-
             <form className="form-gap">
                 <h2 className="h2">{title}</h2>
                 <input className="form-control" type='text' placeholder='url' name="url"

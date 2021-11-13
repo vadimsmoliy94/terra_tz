@@ -1,22 +1,12 @@
 import { useEffect, useState } from "react";
-// import EditModal from "./component/EditModal";
-// import AddPost from "./component/Addpost";
-// import PostList from "./component/PostList";
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 import Edit from "./page/Edit";
-
 import './App.css';
 import Home from "./page/Home";
-
 
 function App() {
 
   const [userData, setUserData] = useState([]);
-
-  // const [modal, setModal] = useState(false);
-
-  // const [data, setData] = useState(null);
-
 
   useEffect(() => {
     fetch('https://yourtestapi.com/api/posts')
@@ -29,8 +19,6 @@ function App() {
       });
   }, []);
 
-
-
   function deletePost(e) {
     setUserData(userData.filter(elem => elem.id !== +e.target.id));
   }
@@ -39,19 +27,6 @@ function App() {
     setUserData([post, ...userData]);
 
   }
-
-  // function editTargetPost(id) {
-  //   let ind = userData.find((elem) => {
-  //     return elem.id === id;
-  //   })
-  //   setData(ind);
-  // }
-
-  // useEffect(() => {
-  //   if (data) {
-  //     setModal(true);
-  //   }
-  // }, [data]);
 
   function updateEdit(updateData) {
     setUserData((data) => data.map((elem) => {
@@ -64,24 +39,16 @@ function App() {
 
   return (
     <div className=" App p-3 mb-2 bg-light text-dark ">
-
       <BrowserRouter>
-        <div>
-          <Link to='/Home'>Home</Link>
-          <Link to='/Edit'>Add/Delete post</Link>
+        <div className="navbar">
+          <Link to='/' className='nav-link' >Home</Link>
+          <Link to='/Edit' className='nav-link'>Add/Delete post</Link>
         </div>
         <Routes>
-
-          <Route path='/Home' element={<Home userData={userData} />} />
+          <Route path='/' element={<Home userData={userData} />} />
           <Route path='/Edit' element={<Edit userData={userData} updateEdit={updateEdit} deletePost={deletePost} addNewPost={addNewPost} />} />
-
         </Routes>
       </BrowserRouter>
-
-      {/* <EditModal visible={modal} setVisible={setModal} data={data} updateEdit={updateEdit} />
-      <AddPost addNewPost={addNewPost} userData={userData} />
-      <PostList userData={userData} deletePost={deletePost} editTargetPost={editTargetPost} /> */}
-
     </div >
   );
 }
