@@ -1,10 +1,10 @@
+
 .App {
   text-align: center;
-  width: 800px;
+  /* width: 800px;  */
+  
 }
-.hide{
-  display: none;
-}
+
 .blok{
   margin-top: 10px;
 }
@@ -14,14 +14,39 @@
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0;
+  right: 600px;
+  
+  background: rgba(0, 0, 0, 0.5);
 }
 .modal.active{
   display: flex;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.7);
+  
+  
+  justify-content: center;
+  align-items: center;
+
   
 }
-.edit_blok{
-  width: 700px;
+
+.edit-btn{
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
 }
+.form-gap{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.list{
+  width: 700px;
+  margin: 0 auto;
+}
+.btn-end{
+  margin-top: 15px;
+}
+
