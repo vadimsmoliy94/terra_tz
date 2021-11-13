@@ -1,6 +1,7 @@
 import "../App.css";
 
 function PostList({ userData, deletePost, editTargetPost }) {
+    console.log(userData)
 
     return (
         <div className="list">
