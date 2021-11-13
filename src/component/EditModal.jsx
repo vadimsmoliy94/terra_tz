@@ -37,15 +37,15 @@ function EditModal({ visible, setVisible, data, updateEdit }) {
     }
     return (
         <div className=" modal active " >
-            <FormPost post={post} setPost={setPost} title='Редагувати пост' />
+            <FormPost post={post} setPost={setPost} title='Edit post' />
             <div className="edit-btn">
-                <button className="btn btn-primary " type="submit" onClick={updatePost}>Зберегти</button>
-                <button className="btn btn-primary" type="submit" onClick={() => setVisible(false)}>Закрити</button>
+                <button className="btn btn-primary " type="submit" onClick={updatePost}>Save</button>
+                <button className="btn btn-primary" type="submit" onClick={() => setVisible(false)}>Close</button>
             </div>
             {
                 erorAddpost
                     ? <div className="p-3 mb-2 bg-warning text-dark  "  >
-                        <p className="h2 ">Для створення поста заповніть усі поля</p>
+                        <p className="h2 ">Fill in all the fields to create a post</p>
                     </div>
                     : <div></div>
             }

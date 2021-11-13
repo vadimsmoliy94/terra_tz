@@ -42,12 +42,12 @@ function AddPost({ addNewPost, userData }) {
 
     return (
         <div className="list">
-            <FormPost post={post} setPost={setPost} title='Створити пост' />
-            <button className="btn btn-primary btn-end" type="submit" onClick={addPost}>Add Post</button>
+            <FormPost post={post} setPost={setPost} title='Create new post' />
+            <button className="btn btn-primary btn-end" type="submit" onClick={addPost}>Add New Post</button>
             {
                 erorAddpost
                     ? <div className="p-3 mb-2 bg-warning text-dark  "  >
-                        <p className="h2 ">Для створення поста заповніть усі поля</p>
+                        <p className="h2 ">Fill in all the fields to create a post</p>
                     </div>
                     : <div></div>
             }
