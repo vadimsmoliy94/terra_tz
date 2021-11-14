@@ -5,16 +5,20 @@ function FormPost({ post, setPost, title }) {
         <>
             <form className="form-gap">
                 <h2 className="h2">{title}</h2>
-                <input className="form-control" type='text' placeholder='url' name="url"
+                <label className="form-label label" htmlFor={post.url}>url</label>
+                <input className="form-control" type='text' placeholder='url' name="url" id={post.url}
                     value={post.url}
                     onChange={e => setPost({ ...post, url: e.target.value })} />
-                <input className="form-control" type='text' placeholder='title' name="title"
+                <label className="form-label label" htmlFor={post.title}>Title</label>
+                <input className="form-control label" type='text' placeholder='title' name="title" id={post.title}
                     value={post.title}
                     onChange={e => setPost({ ...post, title: e.target.value })} />
-                <input className="form-control" type='text' placeholder='description' name="text"
+                <label className="form-label label" htmlFor={post.text}>Description</label>
+                <input className="form-control" type='text' placeholder='description' name="text" id={post.text}
                     value={post.text}
                     onChange={e => setPost({ ...post, text: e.target.value })} />
-                <input className="form-control" type='text' placeholder='image url' name="image"
+                <label className="form-label label" htmlFor={post.image}>image-url</label>
+                <input className="form-control" type='text' placeholder='image url' name="image" id={post.image}
                     value={post.image}
                     onChange={e => setPost({ ...post, image: e.target.value })} />
             </form>
